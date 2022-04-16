@@ -1,0 +1,33 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+html{
+    font-family: Calibri, sans-serif;
+}
+button{
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #333;
+}
+a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+h1{
+    text-align: center;
+}
+
+#googleMap{
+    height: 300px;
+    width: 400px;
+    margin: 50px auto 0;
+    border: 2px solid #444;
+}
+
+
+

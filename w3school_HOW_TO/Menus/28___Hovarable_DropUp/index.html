@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoverable DropUp</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+        button{
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .dropbtn{
+            background-color: #0800ac;
+            color: #fff;
+            padding: 16px;
+            font-size: 17px;
+        }
+        .dropup{
+            position: relative;
+            display: inline-block;
+            top: 140px;
+        }
+        .dropup-content{
+            position: absolute;
+            bottom: 50px;
+            background-color: #f3f3f3;
+            min-width: 160px;
+            box-shadow: 0px -8px 20px;
+            z-index: 1;
+            display: none;
+        }
+        .dropup-content a{
+            color: #000;
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+        }
+        .dropup:hover .dropup-content{
+            display: block;
+        }
+        .dropup:hover .dropbtn{
+            background-color: #2921d4;
+        }
+        .dropup-content a:hover{background-color: #ccc;}
+    </style>
+</head>
+<body>
+    
+    <div class="dropup">
+        <button class="dropbtn">DropUp</button>
+        <div class="dropup-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+    
+    
+    <script>
+        
+    </script>
+</body>
+</html>

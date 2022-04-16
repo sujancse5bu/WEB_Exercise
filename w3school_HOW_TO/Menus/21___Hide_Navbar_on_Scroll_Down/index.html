@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hide navbar on scroll down</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+        #navbar{
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            transition: top 0.3s;
+        }
+        #navbar a{
+            float: left;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+        }
+        #navbar a:hover{
+            background-color: #ddd;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="navbar">
+        <a href="#">Home</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est mollitia possimus dignissimos! Maxime, quasi, et. Delectus quam labore quae rem, veritatis asperiores nostrum harum, explicabo qui ea quod accusantium nihil distinctio voluptas recusandae, mollitia ducimus illo esse natus! Enim aut quasi voluptas quibusdam, aliquam in ducimus alias ipsum quas possimus quam vel nam pariatur velit quos culpa impedit consectetur, praesentium, aperiam? Dicta corporis enim ducimus vero nostrum sequi deserunt eos ipsa corrupti ab! Numquam officia sed, nemo. Provident asperiores accusamus magnam dolores harum tempore facere, modi incidunt veniam perspiciatis vitae nulla laudantium voluptate quo nobis, labore odio neque minima illum dicta voluptatum voluptatibus id, optio dolorum! At accusantium explicabo reprehenderit maiores natus praesentium optio amet, odit ab, laudantium doloribus itaque adipisci nisi eum, est, similique recusandae et incidunt? Minus voluptatum rem aut fugit, nisi quod consectetur illo enim dolor veritatis, aperiam ullam vero aliquid ipsa, perspiciatis recusandae ducimus. Ipsum vero ea impedit dolorum quidem explicabo, nihil totam quisquam inventore dolores at molestiae in excepturi! Amet aut neque explicabo porro autem quisquam eligendi recusandae, veniam alias minus hic non molestiae nihil, ut nisi, eveniet magnam sed ad, sit laboriosam reiciendis impedit quos illum a itaque. Officia cum, commodi illo voluptates ipsa esse totam repellat minima quisquam. Doloribus, animi nihil esse. Alias ut ipsa recusandae provident iusto deserunt distinctio est? Iusto nulla possimus ex veritatis laborum blanditiis eaque atque recusandae, quam dolore enim. Mollitia optio recusandae dolor voluptatibus, aliquam fugit, vero debitis animi, hic, accusamus expedita saepe earum veniam! Aliquid in impedit earum, qui rerum voluptates nam dignissimos? Maxime numquam saepe, molestias. Modi ducimus ea laborum. Modi, quae optio reprehenderit repellat, laboriosam assumenda maxime cum, eum quaerat quidem, harum soluta. Autem omnis eveniet architecto nobis! Facilis sed facere ullam nesciunt quidem, nobis doloremque, assumenda rem, beatae necessitatibus ducimus ab officiis minus eveniet at iste magni, labore delectus suscipit quis incidunt. Rerum, doloremque ea delectus fuga odit. Dolorum nihil non asperiores dolor doloribus id officia aliquam quam, excepturi consectetur mollitia labore eum hic quidem quibusdam, ex cumque minus officiis sed, illo natus aliquid. Deserunt quod quibusdam excepturi debitis, voluptatibus a rerum quasi fugiat dicta adipisci ab ducimus labore dolor cumque vitae sint perspiciatis commodi ullam, nobis, magni? Asperiores est soluta incidunt quidem tenetur assumenda, provident fuga! Harum dicta, dolores quasi, suscipit autem veritatis. Debitis dolorum, aliquam facilis, quae veritatis eaque natus sed, amet repellendus atque nesciunt maxime, voluptatibus molestiae fugit dolorem minus sit.</div>
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function(){
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) document.getElementById("navbar").style.top = "0";
+            else document.getElementById("navbar").style.top = "-50px";
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+</body>
+</html>

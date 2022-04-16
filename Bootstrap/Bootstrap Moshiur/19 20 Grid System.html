@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap 4</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .mcls{
+            background-color: #000; 
+            color: #aaa; 
+            font-size: 30px; 
+            font-family: titillium web;
+            letter-spacing: 2px;
+            padding-left: 50px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="mcls">19 Grid System</div>
+    
+    <div class="container">
+        <!--Auto Layout Columns-->
+        <div class="row">
+            <div class="col">
+                <h3>Sujan</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quae et facilis sequi reprehenderit dignissimos neque odio assumenda tempora commodi.</p>
+            </div>
+            <div class="col">
+                <h3>Sujan</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quae et facilis sequi reprehenderit dignissimos neque odio assumenda tempora commodi.</p>
+            </div>
+        </div>
+        <br><br>
+        
+        <!--Responsive Classes-->
+        <div class="row">
+            <div class="col">
+                <h3>Sujan</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quae et facilis sequi reprehenderit dignissimos neque odio assumenda tempora commodi.</p>
+            </div>
+            <div class="col">
+                <h3>Sujan</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quae et facilis sequi reprehenderit dignissimos neque odio assumenda tempora commodi.</p>
+            </div>
+            <div class="col">
+                <h3>Sujan</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quae et facilis sequi reprehenderit dignissimos neque odio assumenda tempora commodi.</p>
+            </div>
+        </div>
+        <br><br>
+        
+        <!--Nesting Grids-->
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Sujan</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quaerat, laboriosam. Ab, soluta inventore velit necessitatibus similique molestias quibusdam architecto!</p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h3>Mridha</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est temporibus error nobis! Ducimus inventore eum neque, ut quae laboriosam. Quis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h3>Mridha</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est temporibus error nobis! Ducimus inventore eum neque, ut quae laboriosam. Quis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        
+        <!--Nesting Grids-->
+        <div class="row">
+            <div class="col-4">
+                <h3>Sujan</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ex vero, labore minus quibusdam est recusandae aut iste ratione minima, sunt deserunt quo, mollitia voluptatibus nesciunt neque, veritatis enim laudantium!</p>
+            </div>
+            <div class="col-4 offset-4">
+                <h3>Mridha</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ex vero, labore minus quibusdam est recusandae aut iste ratione minima, sunt deserunt quo, mollitia voluptatibus nesciunt neque, veritatis enim laudantium!</p>
+            </div>
+        </div>
+        <br>
+        <br><br>
+        
+        <!--Nesting Grids-->
+        <div class="row">
+            <div class="col order-3">
+                <h3>First Column</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, iusto!</p>
+            </div>
+            <div class="col order-2">
+                <h3>Second Column</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, iusto!</p>
+            </div>
+            <div class="col order-1">
+                <h3>Third Column</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, iusto!</p>
+            </div>
+            
+        </div>
+        
+        
+        
+        
+    </div>
+    
+    <div class="mcls">20 Grid Alignment</div>
+    <div class="container">
+        <br><br>
+        
+        <!--Vertical Alignmennt-->
+        <div class="row align-items-start" style="height: 200px; border: 1px #333 solid; margin-bottom: 10px;">
+            <div class="col">
+                Top aligned text
+            </div>
+            <div class="col">
+                Top aligned text
+            </div>
+            <div class="col">
+                Top aligned text
+            </div>
+        </div>
+        <div class="row align-items-center" style="height: 200px; border: 1px #333 solid; margin-bottom: 10px;">
+            <div class="col">
+                Center aligned text
+            </div>
+            <div class="col">
+                Center aligned text
+            </div>
+            <div class="col">
+                Center aligned text
+            </div>
+        </div>
+        <div class="row align-items-end" style="height: 200px; border: 1px #333 solid; margin-bottom: 10px;">
+            <div class="col">
+                End aligned text
+            </div>
+            <div class="col">
+                End aligned text
+            </div>
+            <div class="col">
+               End aligned text
+            </div>
+        </div>
+        <br><br>
+        
+        <!--Vertical Alignmennt in individual Columns-->
+        <div class="row align-items-start" style="height: 200px; border: 1px #333 solid; margin-bottom: 10px;">
+            <div class="col align-self-start">
+                Top aligned text
+            </div>
+            <div class="col align-self-center">
+                Top aligned text
+            </div>
+            <div class="col align-self-end">
+                Top aligned text
+            </div>
+        </div>
+        <br><br>
+        
+        <!--Horizontal align of cols-->
+        <div class="container">
+            <div class="row justify-content-start" style="height: 200px; border: 1px solid #444">
+                <div class="col-4">
+                    left aligned text
+                </div>
+                <div class="col-4">
+                    left aligned text
+                </div>
+                
+            </div><br>
+            <div class="row justify-content-center" style="height: 200px; border: 1px solid #444">
+                <div class="col-4">
+                    center aligned text
+                </div>
+                <div class="col-4">
+                    center aligned text
+                </div>
+                
+            </div><br>
+            <div class="row justify-content-end" style="height: 200px; border: 1px solid #444">
+                <div class="col-4">
+                    bottom aligned text
+                </div>
+                <div class="col-4">
+                    bottom aligned text
+                </div>
+                
+            </div>
+            <br>
+            
+            <div class="row justify-content-around" style="height: 200px; border: 1px solid #444">
+                <div class="col-4">
+                    Content Around
+                </div>
+                <div class="col-4">
+                    Content Around
+                </div>
+                
+            </div>
+            <br>
+            <div class="row justify-content-between" style="height: 200px; border: 1px solid #444">
+                <div class="col-4">
+                    Content Between
+                </div>
+                <div class="col-4">
+                    Content Between
+                </div>
+                
+            </div>
+            <br>
+            
+            
+            
+        </div>
+        
+        <br><br>
+        
+        <!--Column Wrapping and NO GUTTERS-->
+        <div class="row no-gutters">
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe optio provident perferendis temporibus. Voluptatum nemo laboriosam, similique quis sit ut perferendis temporibus, quasi blanditiis suscipit, ullam autem. Repudiandae, ea excepturi?
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe optio provident perferendis temporibus. Voluptatum nemo laboriosam, similique quis sit ut perferendis temporibus, quasi blanditiis suscipit, ullam autem. Repudiandae, ea excepturi?
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe optio provident perferendis temporibus. Voluptatum nemo laboriosam, similique quis sit ut perferendis temporibus, quasi blanditiis suscipit, ullam autem. Repudiandae, ea excepturi?
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        
+        <br><br>
+    </div>
+    
+    
+    <script src="js/popper.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide Down a Bar on Scroll</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+        #navbar{
+            background-color: #333;
+            position: fixed;
+            width: 100%;
+            transition: top 0.3s;
+            top: -50px;
+        }
+        #navbar a{
+            float: left;
+            display: block;
+            color: #FFF;
+            text-align: center;
+            text-decoration: none;
+            padding: 15px;
+            font-size: 17px;
+        }
+        #navbar a:hover{
+            background-color: #ddd;
+            color: #000;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div id="navbar">
+        <a href="#">Home</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+    </div>
+    
+    <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima assumenda quidem eum voluptates totam sunt veritatis atque! Harum nostrum id officia saepe itaque reiciendis, error qui pariatur rerum a nihil nesciunt velit, officiis cupiditate beatae voluptates exercitationem, delectus mollitia architecto. Quis ut, cupiditate! In alias dolor quidem nam, doloremque vero ea illo porro maxime tempore ex officia? Tenetur porro asperiores recusandae tempora eligendi! Tempore adipisci iure vel mollitia doloremque cum ullam eligendi neque, blanditiis placeat! Debitis velit, ut voluptas dignissimos vitae dolores inventore natus repudiandae ullam a. Ipsum accusamus nobis error, quis odit labore harum repellendus perferendis soluta nam eaque veniam fugit excepturi corrupti dolorem quas quae quos, nisi tempore expedita facilis libero a? Beatae doloremque aliquam quis libero ipsa magni amet iusto necessitatibus, recusandae, at voluptatibus? Impedit est porro aliquid hic iure dignissimos veritatis magnam numquam sunt, libero perspiciatis mollitia possimus, fuga nostrum sint quasi ullam corporis. Consectetur, officia dolore dolores unde fugiat rem quas dignissimos nulla reprehenderit voluptates necessitatibus similique nostrum quibusdam impedit quae iure commodi placeat ad recusandae ullam ipsum corporis. Cumque cupiditate quis, nostrum corporis quod id laboriosam rem enim sunt iure, adipisci nam distinctio voluptatibus similique fugit itaque odio unde tenetur ea pariatur neque ipsum laborum inventore. Quibusdam, voluptas dicta id fugiat nulla alias iusto odit illum dolore molestias commodi, voluptatum dolor. Illum eos quibusdam inventore sed vero excepturi delectus adipisci temporibus reprehenderit earum dignissimos architecto a ut alias, porro. Quas aliquam voluptatum ad, maxime ab accusamus numquam quo voluptates molestias libero. Totam officia dicta commodi voluptates, eius sint cupiditate. Sunt quaerat tempora dignissimos numquam quia obcaecati reiciendis libero, consequuntur, nesciunt debitis voluptatum ullam velit iusto expedita accusantium atque deleniti, ducimus totam sapiente esse delectus tenetur laudantium! Excepturi cupiditate debitis pariatur voluptatibus autem, ipsum culpa non. Porro molestiae doloremque dolore dolorum! Eligendi doloremque est libero commodi deserunt voluptatem veniam neque possimus, voluptas, aut dolorem adipisci cumque hic quibusdam doloribus placeat obcaecati quisquam, eos vero sit. Excepturi iusto minus quisquam tempora aliquam, ut voluptates eligendi, maxime consectetur ea explicabo aliquid rem odio eum velit dicta inventore, sunt possimus tempore fugiat eius voluptatibus nulla, tenetur earum. Totam in ipsum ut beatae sit modi accusamus numquam excepturi sint incidunt, voluptatum delectus aliquam ea reiciendis distinctio repellat consectetur voluptatem tempore officiis deserunt, cumque quam necessitatibus commodi voluptatibus? Repellat, quidem, reiciendis alias iste repellendus beatae itaque, sit possimus quia odit a maiores pariatur. Quis rem blanditiis voluptatibus iste quidem nemo?</div>
+    
+    <script>
+        window.onscroll = function(){
+            scrollFunction();
+        };
+        function scrollFunction(){
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-50px";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Menu</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+        .header{
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .row{
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+        }
+        .left{
+            flex: 35%;
+            padding: 15px 0;
+            background-color: #bbb;
+        }
+        .left h2{
+            padding-left: 8px;
+        }
+        .right{
+            flex: 65%;
+            padding: 15px;
+            background-color: #ddd;
+        }
+        #mySearch {
+            width: 100%;
+            font-size: 18px;
+            padding: 11px;
+            border: 1px solid #ddd;
+        }
+        #myMenu{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #myMenu li a{
+            padding: 12px;
+            text-decoration: none;
+            color: #000;
+            display: block;
+        }
+        #myMenu li a:hover{
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <h2>Search Menu</h2>
+        <p>Start to type for a specific category inside the search bar <br> to "filter" the search options.</p>
+    </div>
+    
+    <div class="row">
+        <div class="left">
+            <h2>Menu</h2>
+        
+
+            <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search Content" title="Type in a Category">
+
+            <ul id="myMenu">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">jQuery</a></li>
+                <li><a href="#">SQL</a></li>
+                <li><a href="#">Bootstrap</a></li>
+                <li><a href="#">Node.js</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <h2>Page Content</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum debitis odio suscipit provident quo commodi consequatur qui repudiandae vero, labore sapiente at, distinctio eligendi voluptas laudantium dolor blanditiis consequuntur, nobis! Rerum saepe quidem magnam possimus, ipsum exercitationem. Assumenda perspiciatis necessitatibus sequi cumque dolorum ipsum et, unde, incidunt obcaecati tempore nesciunt.</p>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++){
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1){
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

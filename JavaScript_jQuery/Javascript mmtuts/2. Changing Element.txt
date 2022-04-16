@@ -1,0 +1,20 @@
+document.querySelector("h1").innerHTML = "Hi! There is Something" ;
+document.querySelector("h1").outerHTML = "<h3>Hi! There is Something</h3>";
+
+document.querySelector("h1").id;                     	                              >returns the id name;
+document.querySelector("h1").id = "sujan";            	                              >sets the id name;
+
+document.querySelector("#sujan").className;           	                              >returns the class Names in an arrey
+document.querySelector("#sujan").classList[2];       	                              >returns the 3rd class Name of the element
+document.querySelector("#sujan").classList[0] = "snta";                               >changes the 1st class
+document.querySelector("#sujan").classList.add("test");                      		  >appends the "test" class
+document.querySelector("#sujan").classList.remove("test");                      	  >deletes the "test" class 
+document.querySelector("#sujan").classList.toggle("test");                      	  >same class selector hisebe use kora jabena. (bash)
+                                                                                        "remove korle false return kore" and vice-versa.
+document.querySelector("#sujan").classList.contains("test");
+
+document.querySelector("#sujan").hasAttribute("href");
+document.querySelector("#sujan").getAttribute("href");                                >returns the value of this attribute
+document.querySelector("#sujan").setAttribute("href","https://www.fb.com");           >href thakle value change hobe, na thakle create hobe
+document.querySelector("#sujan").removeAttribute("href");           >href thakle value change hobe, na thakle create hobe
+

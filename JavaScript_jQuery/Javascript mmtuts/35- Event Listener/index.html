@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Listener</title>
+    <style>
+        .div1{
+            width: 400px;
+            height: 1000px;
+            background: #000;
+            margin: 0 auto;
+            position: relative;
+        }
+        .div1 .btn{
+            position: absolute;
+            bottom: 30px;
+            left: 130px;
+        }
+    </style>
+</head>
+<body>
+        
+    <div class="div1">
+        <div class="btn"><button class="mn-btn">Click me to Change!</button></div>
+    </div>
+    
+</body>
+<script>
+    
+    let btn = document.querySelector(".mn-btn");
+    
+    
+    /* Event Handler Example>> */
+    
+    /*function firstFunction(){
+        btn.innerHTML = "Hey!";
+    }
+    
+    function secondFunction(){
+        btn.style.backgroundColor = "green";
+    }
+    
+    function btnClick(e){
+        e.preventDefault();
+        firstFunction();
+        secondFunction();
+    }
+    
+    btn.onclick = btnClick;
+    */
+    
+    
+    /* Event Listener Example>> More Effective* */
+    function firstFunction(e){
+        e.preventDefault();
+        btn.innerHTML = "Hey!";
+    }
+    
+    function secondFunction(){
+        btn.style.backgroundColor = "green";
+    }
+    
+    btn.addEventListener("click",firstFunction); 
+    btn.addEventListener("click",secondFunction);
+    
+    
+    
+</script>
+</html>

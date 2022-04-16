@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta char="UTF-8">
+    <title>Javascript Fundamental</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <section class="content">
+        <div class="header">
+            <h2>Tutotial: Javascript Fundamental</h2>
+        </div>
+        <div class="main">
+            
+            
+            
+            <div>
+                <input type="button" value="Test countdown" onclick="countdownInit()">
+                <input type="button" value="Clear countdown" onclick="countdownClear()">
+            </div>
+            <div id="show" style="width: 100%; height: 300px; background: #aaa; display: block;"></div>
+        </div>
+        <div class="footer">
+            <h2>Training With Live Project</h2>
+        </div>
+    </section>
+    <script>
+        
+        /*var countdown;
+        var countdownNumber;
+        function countdownInit(){
+            countdownNumber=0;
+            countdownTrigger();
+        }
+
+        function countdownTrigger(){
+            if (countdownNumber<11000) {
+                countdownNumber++;
+                document.getElementById("show").innerHTML=countdownNumber;
+                countdown = setTimeout("countdownTrigger()",100);
+            }
+        }
+
+
+        function countdownClear(){
+            clearTimeout(countdown);
+            document.getElementById("show").innerHTML = "The countdown has been cleared.";
+        }
+*/
+        let d = setInterval(function (){
+            clearInterval(d);
+            let s = document.querySelector(".content .main div#show");
+            s.style.display = "none";
+        },2000);
+        
+
+    </script>
+</body>
+</html>

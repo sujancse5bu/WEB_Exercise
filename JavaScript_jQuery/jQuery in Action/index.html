@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery in Action</title>
+    <script src="../jquery-3.4.1.min.js"></script>
+    
+    
+    <style>
+        body{margin: 0;padding: 0;}
+        div{
+            height: 100px;
+            width: 100px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <button>Hello</button>
+    <div class="spa">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur voluptate totam, officiis placeat ipsa quaerat nostrum? Quod perspiciatis aspernatur beatae quis labore maiores suscipit aperiam praesentium et, reiciendis. Quam quasi officiis provident. Iste doloremque earum amet animi eligendi, officiis facilis sapiente, expedita molestias nulla, asperiores id illo ex labore. Omnis hic quo nesciunt. Nostrum harum laborum tempora expedita quod quae fugit velit dignissimos pariatur itaque fugiat ea, quos, suscipit dolore voluptates voluptas quibusdam consequuntur maxime odio blanditiis, accusamus, tenetur. Molestiae doloribus id soluta, suscipit vitae et quisquam porro delectus quos doloremque, tempore a omnis iure repellat dolorum. Dolores, quo, doloribus! Modi inventore quidem unde quas adipisci vero tenetur, deserunt ipsum fugiat optio, quam provident ullam facere nemo dolor aspernatur nam architecto nesciunt blanditiis esse quo nulla numquam excepturi! Reiciendis omnis, tempore, quis incidunt provident dolorem enim accusamus nobis facere fuga ipsum dolores. Nisi ducimus, nobis. Nemo porro nobis omnis aliquid eius optio explicabo ullam error beatae molestias odio commodi, reprehenderit repudiandae autem animi. Iure accusamus quidem ipsam facilis maxime perferendis blanditiis, officia expedita voluptatem quos ipsum ab vitae porro vel laudantium eius aliquam eos nam distinctio minima praesentium nihil sit nostrum deleniti deserunt. Itaque iste aut, fuga. Sunt earum, animi!
+    </div>
+    
+    <script type="text/javascript">
+        
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("div").animate({
+                    left: '300px',
+                    width: '300px',
+                    height: '300px';
+                });
+            });
+        });
+        
+    </script>
+    
+</body>
+</html>

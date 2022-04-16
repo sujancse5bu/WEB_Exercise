@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <img src="img2.png" alt="Make it Simple but Significant" id="myImg" style="max-width: 300px;">
+    
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img alt="" class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    
+    
+    <script>
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        
+        img.onclick = function (){
+            //alert("noen");
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function(){
+            modal.style.display = "none";
+        }
+        
+    </script>
+</body>
+</html>

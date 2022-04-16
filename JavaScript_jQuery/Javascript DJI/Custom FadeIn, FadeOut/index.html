@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta char="UTF-8">
+    <title>Javascript Fundamental</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <section class="content">
+        <div class="header">
+            <h2>Tutotial: Javascript Fundamental</h2>
+        </div>
+        <div class="main">
+            <div>
+                <button onclick="fadeOut()" style="display: block;">Start</button>
+                <img src="download.jpg" alt="" id="mg">
+            </div>
+            <script type="text/javascript">
+                //document.getElementById("hour").innerHTML = hour;
+                var element = document.getElementById("mg");
+                var duration=1000;
+                var hidtime=1000;
+                var showtime=1000;
+                function setOpacity(v){
+                    element.style.opacity=v;
+                }
+                function fadeOut(){
+                    for(i=0;i<=1;i+=0.0001){
+                        setTimeout("setOpacity("+(1-i)+")",i*duration);
+                    }
+                    setTimeout("fadeIn()",(2000));
+                }
+                function fadeIn(){
+                    for(i=0;i<=1;i+=0.0001){
+                        setTimeout("setOpacity("+i+")",i*duration);
+                    }
+                    setTimeout("fadeOut()",(2000));
+                }
+                
+                
+                
+            </script>
+            
+            
+        </div>
+        <div class="footer">
+            <h2>Training With Live Project</h2>
+        </div>
+    </section>
+</body>
+</html>

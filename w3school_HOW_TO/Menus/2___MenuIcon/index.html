@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Icon</title>
+    <style>
+        .container{
+            display: inline-block;
+            cursor: pointer;
+        }
+        .bar-1, .bar-2, .bar-3, .test{
+            width: 35px;
+            height: 6px;
+            background-color: #000;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+        
+        .change .bar-1{
+            transform: rotate(-45deg) translate(-9px, 8px);
+            
+        }
+        .change .bar-2{
+            opacity: 0;
+        }
+        .change .bar-3{
+            transform: rotate(45deg) translate(-9px, -8px);
+            
+        }
+        .test{
+            background-color: rgba(163, 40, 40, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container" onclick="myFunction(this)">
+        <div class="test"><div class="bar-1"></div></div>
+        <div class="bar-2"></div>
+        <div class="test"><div class="bar-3"></div></div>
+    </div>
+    
+    <script type="text/javascript">
+        function myFunction(x){
+            x.classList.toggle("change");
+        }
+    </script>
+</body>
+</html>

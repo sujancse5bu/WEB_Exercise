@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h2{
+            text-align: center;
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 300px;
+            margin: 0 auto;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        li{
+            padding: 5px 30px;
+            background-color: #d6ffff;
+            margin-bottom: 3px;
+            cursor: pointer;
+        }
+        form{
+            width: 300px;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        input, button{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            font-size: 17px;
+        }
+        input[type="text"]{
+            border: 1px solid #2f98e5;
+            background-color: #eee;
+        }
+        button{
+            margin-top: 5px;
+            font-weight: 600;
+            background-color: #063426;
+            color: #ddd;
+            transition: 0.3s;
+        }
+        button:hover{
+            background-color: #4f8977;
+            color: #101010;
+        }
+        .complete{
+            background-color: #64ffcb;
+        }
+        #counter{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #073133;
+            border-radius: 50%;
+            line-height: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        #showForm{
+            background-color: #89a2a2;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 10px;
+        }
+        #showForm:hover{
+            background-color: #cbca43;
+        }
+    </style>
+</head>
+<body>
+    <h2>List Management System</h2>
+    <div style="width: 100%; text-align: center;">
+        <span id="counter"></span>
+    </div>
+    <ul>
+        <li>Sujan</li>
+        <li>Shanta</li>
+        <li>Samir</li>
+        <li>Tushar</li>
+        <li>Smriti</li>
+    </ul>
+    <form action="">
+        <p id="showForm"> Show Form </p>
+        <input type="text" id="newItemForm" placeholder="Enter New Item">
+        <button type="submit" value="submit" id="newItemButton">Submit</button>
+    </form>
+    <script>
+        
+        $(function() {
+            var $list, $newItemForm, $newItemButton;
+            var item = '';
+            $list = $('ul');
+            $newItemForm = $('#newItemForm');
+            $newItemButton = $('#newItemButton');
+            $showForm = $('#showForm');
+            
+            $('li').hide().each(function(index) {
+                $(this).delay(450 * index).fadeIn(1600);
+            });
+            
+            // Item Counter
+            function updateCount(){
+                var items = $('li[class!=complete]').length;
+                $('#counter').text(items);
+            }
+            updateCount();
+            
+            $newItemButton.hide();
+            $newItemForm.hide();
+            $showForm.show();
+            $showForm.on('click', function() {
+                $showForm.hide();
+                $newItemForm.show();
+                $newItemButton.show();
+            });
+            
+            // Adding a new List Item
+            $newItemButton.on('click', function(e) {
+                e.preventDefault();
+                var text = $('input:text').val();
+                $list.append('<li>' + text + '</li>');
+                $('input:text').val('');
+                updateCount();
+            });
+            
+            $list.on('click', 'li', function() {
+                var $this = $(this);
+                var complete = $this.hasClass('complete');
+                if (complete === true) {
+                    $this.animate({
+                        opacity: 0.0,
+                        paddingLeft: '+=300'
+                    }, 500, 'swimg', function() {
+                        $this.remove();
+                    });
+                } else {
+                    item = $this.text();
+                    $this.remove();
+                    $list.prepend('<li class=\"complete\">' + item + '</li>' ).hide().fadeIn(300);
+                    updateCount();
+                }
+            });
+        });
+        
+    
+    </script>
+</body>
+</html>

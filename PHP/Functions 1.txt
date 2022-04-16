@@ -1,0 +1,4 @@
+1. strtoupper($stringName);
+2. strtolower($stringName);
+3. strlen($stringName);
+4. 

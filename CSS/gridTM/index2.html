@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display: grid;
+            /*grid-template-columns: 1fr 2fr 1fr;*/
+            grid-template-columns: repeat(3, 1fr);
+            /*grid-auto-rows: 100px;*/
+            grid-auto-rows: minmax(100px, auto);
+        }
+        .wrapper > div {
+            background-color: #eee;
+            padding: 1rem;
+        }
+        .wrapper > div:nth-child(odd) {
+            background-color: #ddd;
+        }
+        .nested{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .nested > div {
+            border: #333 1px solid
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="">
+            Lorem ipsum dolor sit.
+        </div>
+        <div class="">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias in veniam harum, fugiat ullam quisquam, iure fuga esse porro accusamus, officia amet. Ea molestiae veniam explicabo ratione vitae amet! Molestiae in quo animi, illo, nostrum pariatur placeat cum veritatis magni.
+        </div>
+        <div class="">
+            Lorem ipsum dolor sit.
+        </div>
+        <div class="nested">
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+        </div>
+        <div class="">
+            Lorem ipsum dolor sit.
+        </div>
+        <div class="">
+            Lorem ipsum dolor sit.
+        </div>
+        <div class="">
+            Lorem ipsum dolor sit.
+        </div>
+        
+    </div>
+</body>
+</html>

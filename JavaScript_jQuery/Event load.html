@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event load</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <style>
+        input{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    
+    <h2 style="letter-spacing: 2px;">NEW ACCOUNT</h2>
+    
+    <form action="">
+        <label for="name">Create a Username: </label><br>
+        <input type="text" id="name"><br>
+        <label for="pswd">Create a Password: </label><br>
+        <input type="password" id="pswd"><br>
+    </form>
+    
+    <script>
+        
+        function setup(){
+            var textInput;
+            textInput = document.getElementById('name');
+            textInput.focus();
+        }
+        window.addEventListener('load', setup, false);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Select  City From studentd where Roll%2=0;

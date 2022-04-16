@@ -1,0 +1,36 @@
+*{margin: 0;font-family: sans-serif;box-sizing: border-box;}
+button{border: none;cursor: pointer;outline: none;background-color: #228cea;}
+
+.content{
+    padding: 100px;
+}
+
+.header{
+    background-color: #353438;
+    color: #ddd;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.progress-container{
+    width: 100%;
+    height: 5px;
+    background-color: #b79df5;
+}
+.progress-bar{
+    background: #0088a0;
+    height: 5px;
+    width: 0%;
+}
+.hello{
+    height: 1px;
+}
+
+
+
+
+
+
+

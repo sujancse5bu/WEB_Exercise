@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animated Font Awesome Icon</title>
+    <link rel="stylesheet" href="all.min.css">
+    <style>
+        #chain{
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body style="font-family: titillium web, serif">
+       
+    <div id="chain" class="fa"></div>
+    
+    
+    
+    
+    <script>
+        let batteryStatus = 0;
+        let chain = document.getElementById('chain');
+        chain.classList.add('fa-battery-empty');
+        function batteryCharging() {
+            setInterval(function() {
+                switch(batteryStatus) {
+                    case 0: 
+                        chain.classList.remove('fa-battery-empty');
+                        chain.classList.add('fa-battery-quarter');
+                        batteryStatus = 1;
+                        break;
+                    case 1: 
+                        chain.classList.remove('fa-battery-quarter');
+                        chain.classList.add('fa-battery-half');
+                        batteryStatus = 2;
+                        break;
+                    case 2: 
+                        chain.classList.remove('fa-battery-half');
+                        chain.classList.add('fa-battery-three-quarters');
+                        batteryStatus = 3;
+                        break;
+                    case 3: 
+                        chain.classList.remove('fa-battery-three-quarters');
+                        chain.classList.add('fa-battery-full');
+                        batteryStatus = 4;
+                        break;
+                    case 4: 
+                        chain.classList.remove('fa-battery-full');
+                        chain.classList.add('fa-battery-empty');
+                        batteryStatus = 0;
+                        break;
+                }
+                
+            }, 300);
+        }
+        batteryCharging();
+    </script>
+</body>
+</html>

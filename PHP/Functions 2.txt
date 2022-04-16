@@ -1,0 +1,27 @@
+String: 
+
+	1. strtoupper($stringName);
+	2. strtolower($stringName);
+	3. strlen($stringName);
+	4. str_raplace("old_substring","new",$stringName);
+	5. substr($stringName,starting position);
+	6. substr($stringName,starting position,length);
+	
+Number:
+	
+	1. abs(number);
+	2. pow(base,power);
+	3. sqrt();
+	4. max(1st num, 2nd num);
+	5. min(1st num, 2nd num);
+	6. round();
+	7. floor();
+	8. ceil();
+	
+	More on W3school;
+	
+Array: 
+	1. Declaration: $friends = array("Rahat","Rakib","Sourav");
+	2. Add Element: $friends[3] = "Topu";
+	3. count($friends); > Number of Elements;
+	

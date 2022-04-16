@@ -1,0 +1,14 @@
+INSERT into posts (subject, content, date) 
+VALUES ('This is the subject',
+	'Ojpas dfd sdkfs dfs dfsld ff df dfkfdfs s a;;as dfod sddifd sdffjladl sdllf 
+		alsdkfkdfdk s dfd sd fsllls  sdoow ddifs dfdfjl m fmmd x z aoeroaof',
+	'2020-06-17 19:40:03');
+	
+	
+INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) 
+VALUES
+('Sujan','Mridha', 'sujanm.cse5.bu@gmail.com','Admin','test123'),
+('Md','Rahat', 'rahat.cse5.bu@gmail.com','md','raht44'),
+('Sourav','Malo', 'sourav.cse5.bu@gmail.com','malo','malo9'),
+('Razinul','Karim', 'razin.cse5.bu@gmail.com','karim','karim111')
+;

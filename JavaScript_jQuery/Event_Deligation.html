@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Deligation</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div style="min-height: 600px;"></div>
+    <ul id="shoppingList" style="padding: 0; margin: 0;">
+        <li class="complete"><a href="Event_Deligation.html?id=1"><em>Fresh </em> figs</a></li>
+        <li class="complete"><a href="Event_Deligation.html?id=2">Pine nuts</a></li>
+        <li class="complete"><a href="Event_Deligation.html?id=3">Honey</a></li>
+        <li class="complete"><a href="Event_Deligation.html?id=4">Balsamic Vineger</a></li>
+    </ul>
+    
+    <script>
+        function getTarget(e) {
+            if (!e) {
+                e = window.event;
+            }
+            return e.target;
+        }
+        function itemDone(e) {
+            var target, elParent, elGrandparent;
+            target = getTarget(e);
+            elParent = target.parentNode;
+            elGrandparent = target.parentNode.parentNode;
+            if (elParent.tagName === 'LI') elGrandparent.removeChild(elParent);
+            
+            if (e.preventDefault) {
+                e.preventDefault();
+            } else {
+                e.returnValue = false;
+            }
+        }
+        
+        
+        
+        
+        
+        // Set up event listeners to call itemDone() on click
+        var el = document.getElementById("shoppingList");
+        if (el.addEventListener) {
+            el.addEventListener('click', function(e) {
+                itemDone(e);
+            }, false);
+        } else {
+            el.attachEvent('onclick',function(){
+                itemDone(e);
+            });
+        }
+        
+    </script>
+</body>
+</html>

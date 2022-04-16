@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slideshow Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        
+        <div class="myslides">
+            <div class="numbertext">1 / 6</div>
+            <img src="img/1.jpg" style="width: 100%;">
+        </div>
+        <div class="myslides">
+            <div class="numbertext">2 / 6</div>
+            <img src="img/2.jpg" style="width: 100%;">
+        </div>
+        <div class="myslides">
+            <div class="numbertext">3 / 6</div>
+            <img src="img/3.jpg" style="width: 100%;">
+        </div>
+        <div class="myslides">
+            <div class="numbertext">4 / 6</div>
+            <img src="img/4.jpg" style="width: 100%;">
+        </div>
+        <div class="myslides">
+            <div class="numbertext">5 / 6</div>
+            <img src="img/5.jpg" style="width: 100%;">
+        </div>
+        <div class="myslides">
+            <div class="numbertext">6 / 6</div>
+            <img src="img/6.jpg" style="width: 100%;">
+        </div>
+        
+        <a href="javascript:void(0)" onclick="plusSlides(-1)" class="prev">&#10094;</a>
+        <a href="javascript:void(0)" onclick="plusSlides(1)" class="next">&#10095;</a>
+        
+        
+        
+    </div>
+    <div class="caption-container">
+        <p id="caption">Hello World</p>
+    </div>
+        
+    <div class="row">
+
+        <div class="col">
+            <img src="img/1.jpg" alt="The woods" class="demo cursor" style="width: 100%;" onclick="currentSlide(1)">
+        </div>
+        <div class="col">
+            <img src="img/2.jpg" alt="Cinque Terre" class="demo cursor" style="width: 100%;" onclick="currentSlide(2)">
+        </div>
+        <div class="col">
+            <img src="img/3.jpg" alt="Northern Lights" class="demo cursor" style="width: 100%;" onclick="currentSlide(3)">
+        </div>
+        <div class="col">
+            <img src="img/4.jpg" alt="Nature and Sunrise" class="demo cursor" style="width: 100%;" onclick="currentSlide(4)">
+        </div>
+        <div class="col">
+            <img src="img/5.jpg" alt="Snowy Mountains" class="demo cursor" style="width: 100%;" onclick="currentSlide(5)">
+        </div>
+        <div class="col">
+            <img src="img/6.jpg" alt="Mountains and fjords" class="demo cursor" style="width: 100%;" onclick="currentSlide(6)">
+        </div>
+    </div>
+    
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n){
+            showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n){
+            showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n){
+            var i;
+            var slides = document.getElementsByClassName("myslides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) slideIndex = 1;
+            if (n < 1) slideIndex = slides.length;
+            for (i = 0; i < slides.length; i++){
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++){
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

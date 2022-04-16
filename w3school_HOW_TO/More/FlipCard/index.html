@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="fontawesome.all.min.css">
+    <style>
+        *{margin: 0;font-family: sans-serif;box-sizing: border-box;}
+        button{border: none;cursor: pointer;outline: none;background-color: #228cea;}
+        body{
+            background-color: #ddd;
+        }
+        .flip-card{
+            margin: 40px 40px;
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            border: 1px solid #f1f1f1;
+            perspective: 1000px;
+        }
+        .flip-card-inner{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        .flip-card:hover .flip-card-inner{
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+        .flip-card-front{
+            background-color: #bbb;
+            color: #000;
+        }
+        .flip-card-back{
+            background-color: dodgerblue;
+            color: #fff;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="img_avatar.png" alt="Avatar" style="height: 300px; width: 300px;"></div>
+            <div class="flip-card-back">
+                <h1>John Doe</h1>
+                <p>Architect & Engineer</p>
+                <p>We love that guy</p>
+            </div>
+        </div>
+    </div>
+    
+    <i class="fas fa-thumbs-up" style="font-size: 166px; margin-left: 0px; transform: rotate(-90deg); cursor:grabbing;" onclick="myFunction()"></i>
+    
+    <script>
+        function myFunction(){
+            var x = document.getElementsByClassName("fas");
+            var y = x[0].classList[1];
+            if (y == "fa-thumbs-up") {
+                x[0].classList.remove("fa-thumbs-up"); 
+                x[0].classList.add("fa-thumbs-down");
+            } else {
+                x[0].classList.remove("fa-thumbs-down");
+                x[0].classList.add("fa-thumbs-up"); 
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap 4</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .mcls{
+            background-color: #000; 
+            color: #aaa; 
+            font-size: 30px; 
+            font-family: titillium web;
+            letter-spacing: 2px;
+            padding-left: 50px;
+            margin: 20px 0;
+        }
+        .row-h1{
+            background: #f4f4f4;
+            height: 250px;
+        }
+        .item-h1{
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="mcls">Modals</div>
+    <div class="container">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#md">Launch Modal</button>
+        <div class="modal" id="md">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>
+                        <button class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, nisi. Possimus culpa numquam saepe voluptate cumque laboriosam veritatis qui deleniti!
+                    </div>
+                    <div class="modal-footer" data-dismiss="modal">
+                        <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        
+        <!-- Login Modal -->
+        <button class="btn btn-success" data-toggle="modal" data-target="#lgn">Log In</button>
+        
+        <div class="modal" id="lgn">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>USER LOG IN</h5>
+                        <button class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="from-group">
+                            <label for="username">Username: </label>
+                            <input class="form-control" type="text" placeholder="Enter username">
+                        </div>
+                        <div class="from-group">
+                            <label for="password">Password: </label>
+                            <input class="form-control" type="password" placeholder="Enter password">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button class="btn btn-warning">Log In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        
+        
+    </div>
+    
+    
+    
+    
+    <script src="js/popper.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

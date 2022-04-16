@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Sidebar</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+        .sidebar {
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+        .sidebar a{
+            display: block;
+            color: #000;
+            text-decoration: none;
+            padding: 16px;
+        }
+        .sidebar a.active{
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        .sidebar a:hover:not(.active){
+            background-color: #555;
+            color: #fff;
+        }
+        div.content{
+            margin-left: 200px;
+            background-color: #191919;
+            padding: 16px;
+            height: 1000px;
+            color: #aaa;
+        }
+        @media screen and (max-width: 700px){
+            .sidebar{
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .sidebar a{float: left;}
+            div.content{margin-left: 0}
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="sidebar">
+        <a class="active" href="#">Home</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+    </div>
+    
+    <div class="content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique hic reiciendis necessitatibus nam molestias dolore quos autem, excepturi, vel quo nihil aut tenetur quasi. Ipsam iste dolorum ut, obcaecati quibusdam ullam, esse dolore deleniti, amet soluta aliquid ducimus, omnis adipisci necessitatibus quam optio! Velit sequi accusamus eligendi sit neque, et eaque sunt, explicabo modi sapiente delectus fugiat beatae nisi accusantium sed eos quam id debitis doloribus porro saepe unde corporis! Tempore soluta cupiditate recusandae illo temporibus facilis aliquam rerum id accusamus sed laboriosam sit natus earum maxime fuga, architecto sint, magnam in porro. Facilis tenetur voluptatibus obcaecati voluptates culpa aperiam minima, eos consequatur. Autem aut ducimus nobis ex deleniti, magni assumenda, rerum dolores magnam obcaecati, optio id. Id, architecto culpa explicabo dicta error vero quisquam eligendi, hic maxime cum repellat eius aliquam fugiat delectus consequatur ad! Consequuntur ad repudiandae ea obcaecati deleniti temporibus, labore ullam, eos error nesciunt minus veritatis numquam nihil distinctio voluptatibus non delectus totam cum dignissimos alias quas illo. Maxime aut dolores sed a reprehenderit et doloremque enim sapiente odio perspiciatis porro repellendus doloribus error, repudiandae provident iusto, obcaecati ipsa animi mollitia, quam iure sint ut. Itaque eius sapiente sequi veniam unde placeat earum eos quo! Aperiam tempora eos iusto suscipit sint, facere, eligendi, repudiandae, repellat quisquam amet maiores excepturi iste sequi ab at nostrum mollitia omnis vitae! Labore, est, eveniet! Unde reprehenderit possimus libero quia, ullam fugit sapiente minus, fuga, hic praesentium, provident tempore qui obcaecati. Veritatis repellendus consequatur iusto, ab suscipit, nam dolorum nesciunt reiciendis. Alias itaque tenetur, debitis aut dolorem blanditiis, sunt distinctio illo quo quae et nobis culpa. Dolor asperiores soluta rerum consequuntur vel totam consequatur porro laborum amet, natus qui dignissimos obcaecati vero tenetur enim delectus itaque optio veritatis, similique voluptatibus, cupiditate deserunt. Corporis, dolorem! Dolorem necessitatibus ea ad tempore enim, animi cumque asperiores quam tempora consequatur distinctio dignissimos natus ipsam unde quod dolore ab est corporis, facere, nihil eos ut voluptas praesentium explicabo laborum? Dignissimos adipisci, dolor ad, inventore totam ratione incidunt id repellendus in dolore consequatur aut unde distinctio accusamus? Necessitatibus accusamus nemo nobis quisquam fugiat molestiae, molestias harum modi distinctio quam sequi, dicta dolorem veritatis reprehenderit ut illo deserunt voluptate iste commodi. Alias explicabo sint ab, optio impedit nulla omnis accusantium rerum ratione voluptatum?
+    </div>
+    
+    <script>
+        
+    </script>
+</body>
+</html>

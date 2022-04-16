@@ -1,0 +1,1 @@
+DELETE FROM `teacherwc` WHERE ID=1000; // conditional OPERATOR use kora jabe

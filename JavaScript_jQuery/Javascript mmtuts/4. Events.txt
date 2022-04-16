@@ -1,0 +1,28 @@
+1. Browser level event
+2. DOM level event
+
+Preventing the default event: 
+	this.preventDefault();
+	
+	
+Multiple function on one Event:
+
+	1. Event Handler > can run only one function at a time.
+	
+	    let btn = document.querySelector(".text-btn");
+	    btn.onclick = firstFunction;
+	    btn.onclick = secondFunction;           > here this function will called only
+		
+		Solution:
+			We have to create one function that can call the number of function that have to called by the event;
+			
+	2. Event Listener > More controlled from Handler
+	    
+		let btn = document.querySelector(".text-btn");
+		btn.addEventListener("click", fristFunction);         > Three different parameters, "two required";
+		btn.addEventListener("click", secondFunction);       
+		btn.addEventListener("click", function(){
+			btn.style.backgroundColor = "blue";
+			thirdFunction(a,b,c);                             > Parameter passing
+		});                                                   > all works 
+		

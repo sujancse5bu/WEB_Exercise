@@ -1,0 +1,42 @@
+Something about JavaScript:
+
+1. nextSibling, preveousSigling returns undefined in some browser 
+    if the html elements contains spaces or enter.
+
+2. To set an eventListener in a parent element (like form, ul, table) 
+    gives a better performance (EVENT DELEGATION), 
+    because creating eventListeners for a lot of elements can slow down a page. 
+    And event deligation would still work the same if new items are inseted 
+    or deleted from the list or table data.
+	
+	
+	
+	
+	
+Something about jQuery:
+
+1. Get and Set Information:
+     GET >> If a jQuery selection holds more than one element,
+	and a method is used to get information from the selected elements, 
+	it will retrieve information from the first element in the matched set. (not the .text() method) ;(;
+	 SET >> If a jQuery selecttion holds more than one element,
+	and a method is used to update information on the page, 
+	it will update all of the elements in the matched set, not just the first one.
+2. $(function() {
+       // script goes here
+   });       
+       >> A positive side effect of writing jQuery  code inside this method is that it
+	   creates function-level scope for its variables. This prevents namimg collisions with other scripts 
+	   might use the same variable name;
+   It is commonly used inseted of 
+   $(document).ready(function() {
+       // script goes here
+   )};
+
+3. $('li').html() returns the first <li> element;
+   $('li').text() returns the content of all <li> elements
+   including spaces between words but no spaces between the individual list items;
+   
+4. To get content from <input> or <textarea> elements, have to use the .val() method.
+
+	

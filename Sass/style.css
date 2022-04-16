@@ -1,0 +1,14 @@
+div {
+  height: 300px;
+  width: 300px;
+  background-color: #cbcbaa;
+}
+div p {
+  color: #0015a8;
+  font-size: 40px;
+}
+div span {
+  font-size: 40px;
+  color: #0bbadd;
+  font-weight: 800;
+}

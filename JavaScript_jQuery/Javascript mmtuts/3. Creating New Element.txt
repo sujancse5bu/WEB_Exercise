@@ -1,0 +1,16 @@
+1. Create a new element > createElement()
+2. Create a text node   > createTextNode()
+3. Attach together      > appendChild()
+
+let box = document.querySelector(".box");
+let newElement = document.createElement("a");
+let newContent = document.createTextNode("This is a Link!");
+newElement.appendChild(newContent);
+box.appendChild(newElement);
+
+
+
+let box = document.querySelector(".box");        \
+let newElement = document.createElement("a");     > Same as the previous method, but not supported by all Browser
+newElement.append("This is a Link!");            /
+box.appendChild(newElement);                    /

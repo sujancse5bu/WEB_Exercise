@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DinimUpdt</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        body{
+            background-color: #a4ccea;
+        }
+        #header .container .row span{
+            font-size: 40px;
+            font-weight: 600;
+            float: left;
+        }
+        #header .container .row nav{
+            margin-left: auto;
+        }
+        #header .container .row nav ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-top: 15px;
+        }
+        #header .container .row nav ul li{
+            display: inline-block;
+            font-size: 17px;
+        }
+        
+        #header .container .row nav ul li a{
+            color: #fff;
+            margin: 5px;
+            padding: 5px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+        #header .container .row nav ul li a:hover,
+        a.current{
+            background-color: #0056a7;
+            transition: 0.3s;
+        }
+        
+        
+        #main .container{
+            min-height: 100%;
+        }
+        
+        
+        
+        #footer .container p{
+            margin-bottom: 0;
+            margin: 2px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <section id="header" class="bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <span>php</span>
+                <nav>
+                    <ul>
+                        <li><a href="load1.html" class="current">Intro</a></li>
+                        <li><a href="load2.html">Install</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+    
+    <section id="main">
+        <div class="container py-5 text-justify">
+            <div class="row">
+                <h4>Introduction to PHP </h4>
+                <p>
+                    PHP runs on all major operating systems, from Unix variants including Linux, FreeBSD, Ubuntu, Debian, and Solaris to Windows and Mac OS X. It can be used with all leading web servers, including Apache, Microsoft IIS, and the Netscape/iPlanet servers.
+                </p>
+                <p>
+                    The language itself is extremely flexible. For example, you aren't limited to outputting just HTML or other text files--any document format can be generated. PHP has built-in support for generating PDF files, GIF, JPEG, and PNG images, and Flash movies.
+                </p>
+                <p>
+                    Finally, PHP provides a library of PHP code to perform  common tasts, such as database abstraction, error handling, and so on, with the PHP Extension and Application Repository (PEAR). PEAR is a framework and distribution system for reusable PHP components. We can find out more about it in <a href="http://pear.php.net">http://pear.php.net</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="footer" class="bg-dark text-light">
+        <div class="container text-center py-2">
+            <p>&copy; 2020</p>
+            <p>All Right Reserved.</p>
+        </div>
+    </section>
+    <script src="bootstrap.min.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

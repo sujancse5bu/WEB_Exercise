@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+    <style>
+        *{
+            text-decoration: none;
+            font-family: arial;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .menu-btn{
+            background: #000;
+            padding: 20px;
+            width: 40px;
+        }
+        .menu-btn a{
+            
+            color: #fff;
+        }
+        .menu{
+            width: 200px;
+            height: 100vh;
+            background: #000;
+            padding-top: 30px;
+            border-top: 2px solid #fff;
+        }
+        .menu li{
+            padding: 20px;
+        }
+        .menu li a{
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="menu-btn"><a href="#">Menu</a></div>
+    <div class="menu">
+        <ul>
+            <li><a href="#">This is Link 1</a></li>
+            <li><a href="#">This is Link 2</a></li>
+            <li><a href="#">This is Link 3</a></li>
+            <li><a href="#">This is Link 4</a></li>
+            <li><a href="#">This is Link 5</a></li>
+        </ul>
+    </div>
+    
+    
+    
+</body>
+<script>
+    let menuBtn = document.querySelector(".menu-btn");
+    let menu = document.querySelector(".menu");
+    let menuStatus = false;
+    
+    menu.style.marginLeft = "-200px";
+    
+    function menuToggle(){
+        if(menuStatus == false){
+            menu.style.marginLeft = "0px";
+            menu.style.transition = "0.5s"
+            menuStatus = true;
+        } else {
+            menu.style.marginLeft = "-200px";
+            menu.style.transition = "0.5s"
+            menuStatus = false;
+        }
+    }
+    
+    menuBtn.onclick = menuToggle;
+    
+    
+</script>
+</html>

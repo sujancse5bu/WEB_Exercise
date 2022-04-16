@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Progress Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hello" style="height: 1200px;"></div>
+    <div id="myProgress">
+        <div id="myBar">0%</div>
+    </div>
+    
+    
+    <script>
+        var i = 0;
+        if (i == 0){
+            i = 1;
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame(){
+                if (width >= 100){
+                    clearInterval(id);
+                    i = 0;
+                } else {
+                    ++width;
+                    elem.style.width = width + "%";
+                    elem.innerHTML = width + "%";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

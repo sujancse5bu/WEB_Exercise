@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Side Navigation</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+        .sidenav{
+            height: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+            width: 0;
+        }
+        .sidenav a{
+            display: block;
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            color: #818181;
+            transition: 0.3s;
+        }
+        .sidenav a:hover{
+            color: #f1f1f1;
+            
+        }
+        .sidenav .closebtn{
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        #main{
+            transition: margin-left 0.5s;
+            padding: 20px;
+            margin-left: 0;
+        }
+        @media screen and (max-height: 450px){
+            .sidenav {padding-top: 25px;}
+            .sidenav a.closebtn{font-size: 20px;}
+        }
+        p{
+            margin-left: 250px;
+            border: 1px solid #444;
+            padding: 5px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="sidenav" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <p onclick="openNav()">Sidenav Overlay</p>
+    <div id="main">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum eveniet alias odit ab aut doloremque voluptatibus quisquam blanditiis quod magni quas hic adipisci veniam consequatur nemo vero laborum placeat, pariatur consequuntur assumenda, optio harum sequi asperiores. Rerum alias amet, veritatis nulla iure nemo consequuntur sint, nam sequi repudiandae deserunt neque facere magni vitae cupiditate praesentium, nisi labore at repellendus obcaecati eveniet earum quasi. Quod a id dolorem voluptatibus iste, ex dolore ducimus quam pariatur commodi quisquam, fuga praesentium non minima possimus, dignissimos accusamus. Itaque illum deserunt dolores eveniet praesentium veniam omnis perspiciatis minima corrupti dolorum consequuntur fugit eligendi, quisquam rem tempore consequatur quasi, illo excepturi fugiat architecto eaque iste quae. Earum perferendis enim, sunt, voluptas eaque commodi molestiae vel labore similique perspiciatis dolor veniam reiciendis ullam, totam illo ipsam facere vitae eos explicabo. Provident dolor doloribus soluta, mollitia quia quo, optio voluptas repudiandae ad suscipit? Eos tempora animi reiciendis debitis voluptate rem, sint. Accusamus saepe voluptates, dolorem labore vero? Reprehenderit iusto, aut, illo eum magnam maxime dolorem veritatis magni ullam rerum nostrum praesentium ipsam esse, facilis perferendis soluta ducimus itaque omnis voluptas? Neque magni consequatur modi magnam cupiditate deserunt eligendi in nisi, consequuntur, alias quos voluptas velit quis nam sapiente.
+    </div>
+    
+    <script>
+        function openNav(){
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+        function closeNav(){
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+html{
+    font-family: Calibri, sans-serif;
+}
+button{
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #333;
+}
+a{
+    text-decoration: none;
+}
+
+.player{
+    position: relative;
+}
+
+
+
+.controls{
+    visibility: hidden;
+    opacity: 1;
+    width: 400px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -200px;
+    background-color: #000;
+    box-shadow: 3px 3px 5px #000;
+    transition: 1s all;
+    display: flex;
+}
+
+
+.player:hover .controls, 
+.player:focus .controls{
+    opacity: 1;
+}
+
+@font-face {
+    font-family: 'HeydingsControlsRegular';
+    src: url('fonts/heydings_controls-webfont.eot');
+    src: url('fonts/heydings_controls-eot?#iefix') format('embedded-opentype'), 
+        url('fonts/heydings_controls-webfont.woff') format('woff'),
+        url('fonts/heydings_controls-webfonts.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+button::before{
+    font-family: HeydingsControlsRegular;
+    font-size: 20px;
+    position: relative;
+    content: attr(data-icon);
+    color: #aaa;
+    text-shadow: 1px 1px 0px #000;
+}
+
+
+.timer {
+    line-height: 38px;
+    font-size: 10px;
+    font-family: monospace;
+    text-shadow: 1px 1px 0px #000;
+    color: #fff;
+    flex: 5;
+    position: relative;
+    
+}
+
+
+.timer div{
+    position: absolute;
+    background-color: rgba(255,255,255, 0.2);
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 38px;
+    z-index: 2;
+}
+
+.timer span{
+    position: absolute;
+    z-index: 3;
+    left: 19px;
+}

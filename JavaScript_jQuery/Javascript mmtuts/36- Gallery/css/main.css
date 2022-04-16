@@ -1,0 +1,44 @@
+/* Wrapper */
+#wrapper-main{
+    margin: 0 10vw;
+}
+.wrapper-gallery{
+    margin: 0 10vw;
+}
+
+/* Default Text Styling */
+p{
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+}
+h2{
+    font-family: Helvetica, sans-serif;
+    font-size: 32px;
+}
+
+#header-main nav{
+    display: grid;
+    grid-template-columns: 240px 3fr;
+    grid-template-rows: auto;
+    padding-bottom: 60px;
+}
+
+#header-main nav i{
+    margin: 25px 0;
+}
+
+#header-main nav ul{
+    justify-self: end;
+}
+
+#header-main nav ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+#header-main nav ul li a{
+    color: #111111;
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+}

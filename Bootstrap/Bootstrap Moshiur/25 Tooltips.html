@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap 4</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .mcls{
+            background-color: #000; 
+            color: #aaa; 
+            font-size: 30px; 
+            font-family: titillium web;
+            letter-spacing: 2px;
+            padding-left: 50px;
+            margin: 20px 0;
+        }
+        .row-h1{
+            background: #f4f4f4;
+            height: 250px;
+        }
+        .item-h1{
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="mcls">Tooltips ;(</div>
+    <div class="container">
+        
+        
+        <button class="btn btn-primary" data-placement="left"  data-toggle="tooltip" title="Hello World">Tooltip on Top</button>
+        <button class="btn btn-primary" data-placement="top" title="Hello World" data-toggle="tooltip">Tooltip on Top</button>
+        <button class="btn btn-primary" data-placement="top" title="Hello World" data-toggle="tooltip">Tooltip on Top</button>
+        <button class="btn btn-primary" data-placement="top" title="Hello World" data-toggle="tooltip">Tooltip on Top</button>
+        
+        <br><br>
+        <button id="hello" class="btn btn-success" data-html="true" data-placement="left"  data-toggle="tooltip" title="<h2>Hello World</h2>">Tooltip on Top</button>
+        <br>
+        <hr>
+        
+        
+        
+        <!-- TRIGGER WITH JS -->
+        <button class="btn btn-secondary" onclick="showToolTip()">Show tooltip</button>
+        <hr>
+        
+        
+        
+        <!-- TRIGGER WITH JS -->
+        <button class="btn btn-warning" onClick="showToolTip()">Show tooltip</button>
+        <br>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="mcls">POPOVER ;(</div>
+    
+    <div class="container">
+        
+        <button class="btn btn-sm btn-success" data-toggle="popover" title="Hello World" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, porro." data-placement="top">Toggle PopOver</button>
+        
+        <button class="btn btn-sm btn-success" data-toggle="popover" title="Hello World" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, porro." data-placement="top">Toggle PopOver</button>
+        
+        <button class="btn btn-sm btn-success" data-toggle="popover" title="Hello World" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, porro." data-placement="top">Toggle PopOver</button>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="js/popper.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $('[data-toggle="tooltip"]').tooltip();
+        function showToolTip(){
+            $('#hello').tooltip('show');
+        }
+        
+        $('[data-toggle="popover"]').popover();
+        
+    </script>
+</body>
+</html>

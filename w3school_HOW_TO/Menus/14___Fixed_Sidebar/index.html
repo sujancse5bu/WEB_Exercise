@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixed sidebar</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+        .sidenav{
+            height: 100%; 
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        .sidenav a{
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            display: block;
+            color: #818181;
+            font-size: 25px;
+        }
+        .sidenav a:hover{
+            color: #f1f1f1;
+        }
+        .main{
+            margin-left: 160px;
+            padding: 0px 10px;
+        }
+        @media screen and (max-height: 450px){
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a{
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="sidenav">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    
+    <div class="main">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ipsam voluptatem amet minus officiis molestiae qui nesciunt quas sint doloribus velit iure natus ipsum deleniti hic, at dolor cum nobis sed vitae. Aliquam enim, ullam nostrum nemo laborum dolor sint id. Fuga distinctio ipsum inventore mollitia doloribus corporis, id quam sed. Perspiciatis praesentium reprehenderit ipsum fugiat, exercitationem aut repudiandae ipsa a minus quo quasi vel porro impedit. Blanditiis ea, in ratione quisquam quidem iste dignissimos iusto sint similique fugit ut quas explicabo commodi placeat sequi facere eveniet saepe! Corrupti, quam ab nesciunt. Harum sint, repellendus? Maxime ut neque quo, nostrum.
+    </div>
+    
+    <script>
+        
+    </script>
+</body>
+</html>

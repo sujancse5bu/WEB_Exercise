@@ -1,0 +1,108 @@
+*{margin: 0;font-family: sans-serif;box-sizing: border-box;}
+button{border: none;cursor: pointer;outline: none;background-color: #228cea;}
+.container{
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.myslides{
+    display: none;
+    transition: all 0.5s;
+}
+.cursor{
+    cursor: pointer;
+}
+.prev,
+.next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: #fff;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    border-radius: 0px 3px 3px 0px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.next{
+    border-radius: 3px 0px 0px 3px;
+    right: 0;
+}
+.prev:hover, .next:hover{
+    background-color: rgba(0,0,0,0.8);
+    transition: 0.5s;
+}
+.numbertext{
+    color: #f2f2f2;
+    position: absolute;
+    top: 0;
+    padding: 8px 12px;
+    font-size: 12px;
+    transition: all 0.5s;
+}
+
+.caption-container{
+    text-align: center;
+    background-color: #222;
+    padding: 10px;
+    color: #fff;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: -5px;
+    transition: all 0.5s;
+}
+.row{
+    max-width: 700px;
+    margin: 0 auto;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.col{
+    float: left;
+    width: 16.66666666%;
+    transition: all 0.5s;
+}
+.demo{
+    opacity: 0.6;
+    transition: all 0.5s;
+}
+.active, .demo:hover{
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

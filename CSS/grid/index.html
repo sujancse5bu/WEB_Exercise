@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .item-1{
+            grid-area: header;
+        }
+        .item-2{
+            grid-area: menu;
+        }
+        .item-3{
+            grid-area: main;
+        }
+        .item-4{
+            grid-area: right;
+        }
+        .item-5{
+            grid-area: footer;
+        }
+        .grid-container{
+            display: grid;
+            grid-gap: 20px;
+            background-color: #607ddd;
+            padding: 20px;
+            grid-template-areas: 'header header header header header header'
+                                 'menu main main main right right'
+                                 'menu footer footer footer footer footer';
+        }
+        .grid-container > div{
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        
+    
+        
+    </style>
+</head>
+<body>
+    
+    <div class="grid-container">
+        <div class="grid-item item-1">Header</div>
+        <div class="grid-item item-2">Menu</div>
+        <div class="grid-item item-3">Main</div>
+        <div class="grid-item item-4">Right</div>
+        <div class="grid-item item-5">Footer</div>
+        <!--div class="grid-item item-6">6</div>
+        <div class="grid-item item-7">7</div>
+        <div class="grid-item item-8">8</div>
+        <div class="grid-item item-9">9</div>
+        <div class="grid-item item-11">11</div>
+        <div class="grid-item item-12">12</div>
+        <div class="grid-item item-13">13</div>
+        <div class="grid-item item-14">14</div>
+        <div class="grid-item item-15">15</div>
+        <div class="grid-item item-16">16</div>
+        <div class="grid-item item-17">17</div>
+        <div class="grid-item item-18">18</div>
+        <div class="grid-item item-19">19</div>
+        <div class="grid-item item-20">20</div>
+        <div class="grid-item item-21">21</div>
+        <div class="grid-item item-22">22</div-->
+    </div>
+    
+    
+</body>
+</html>
+
